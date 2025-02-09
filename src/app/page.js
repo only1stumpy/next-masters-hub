@@ -21,9 +21,11 @@ import avatar5 from "./img/avatar5.png"
 import avatar6 from "./img/avatar6.png"
 import avatar7 from "./img/avatar7.png"
 import avatar8 from "./img/avatar8.png"
+import video from "./img/video_resume.png"
+import arrow from "./img/Arrow.png"
 
 // Icons
-import { MdDevices } from "react-icons/md";
+import { MdDevices, MdOutlineDevices,MdOutlineBuildCircle  } from "react-icons/md";
 import { RxComponent2 } from "react-icons/rx";
 import { IoIosStats } from "react-icons/io";
 import { TbReportMoney } from "react-icons/tb";
@@ -31,6 +33,9 @@ import { GoPeople } from "react-icons/go";
 import { BsArrowUpRightCircleFill, BsStars, BsBadgeAd } from "react-icons/bs";
 import { IoBriefcaseOutline } from "react-icons/io5";
 import { FaSearchLocation, FaMapMarkerAlt, FaStar } from "react-icons/fa";
+import { BiWorld } from "react-icons/bi";
+import { TiMessages } from "react-icons/ti";
+
 
 
 const getRandomUsers = (users) => {
@@ -108,8 +113,8 @@ function Page() {
             <Image src={card4} alt="card4" width={288} height={338} className="mx-3" />
           </Marquee>
         </section>
-        <section className="pt-[88px] flex flex-col items-center justify-center font-normal text-base font-manrope text-center animate-fadeInOut opacity-0 [animation-delay:1.7s]">
-          <h1 className="font-general font-medium text-6xl text-neutral-900">Discover the<br/>Emerging Masters</h1>
+        <section className="flex flex-col items-center justify-center font-normal text-base font-manrope text-center animate-fadeInOut opacity-0 [animation-delay:1.7s] bg-bg-100">
+          <h1 className="pt-[88px] font-general font-medium text-6xl text-neutral-900 w-screen bg-gradient-to-b from-white to-bg-100">Discover the<br/>Emerging Masters</h1>
           <p className="text-main-200 mt-4">Find the best master for your company and boosts<br/>your business 10x!</p>
           
           <Tabs.Root defaultValue="developer" className=" mt-10">
@@ -119,7 +124,7 @@ function Page() {
                   key={tab.value}
                   value={tab.value}
                   onClick={() => setActiveTab(tab.value)}
-                  className="flex items-center justify-center w-[185px] h-12 text-neutral-900  hover:text-button-100 aria-selected:text-button-100 transition-all duration-200 border-b border-main-300/10 aria-selected:bg-gradient-to-t aria-selected:border-b-button-100 aria-selected:from-button-100/10 aria-selected:to-white aria-selected:to-40% aria-selected:pb-1.5 overflow-hidden 
+                  className="flex items-center justify-center w-[185px] h-12 text-neutral-900  hover:text-button-100 aria-selected:text-button-100 transition-all duration-200 border-b border-main-300/10 aria-selected:bg-gradient-to-t aria-selected:border-b-button-100 aria-selected:from-button-100/10 aria-selected:to-bg-100 aria-selected:to-40% aria-selected:pb-1.5 overflow-hidden 
                   aria-selected:border-none aria-selected:after:content-[''] aria-selected:after:absolute aria-selected:after:bottom-0 aria-selected:after:left-0 aria-selected:after:w-full aria-selected:after:h-[1px] aria-selected:after:bg-button-100"
           >
                   {tab.icon}
@@ -155,12 +160,58 @@ function Page() {
             </Tabs.Content>
           ))}
           </Tabs.Root>
-          <div className="flex justify-center mt-10">
+          <div className="flex justify-center pt-10 pb-[88px] w-screen bg-gradient-to-t from-white to-bg-100">
                 <button>
                   <a href="#" className="flex items-center text-button-100 border border-button-100 rounded-full hover:bg-button-100 hover:text-white transition font-bold">
                     <p className="p-3 pl-6">View All</p> <BsArrowUpRightCircleFill className="w-10 h-10 m-1" />
                   </a>
                 </button>
+          </div>
+        </section>
+        <section className="flex justify-center items-center flex-col font-manrope min-w-screen min-h-screen relative">
+          <h1 className="pt-[88px] font-general text-6xl text-neutral-900 text-center">Why Choose<br/>Masters in Me?</h1>
+          <p className="text-main-100 pt-4 text-center">Unlock your true potential and discover a world of opportunities<br/>that align with your skills, interests, and aspirations</p>
+          <div className="mt-[52px] bg-[url('/img/bg-circles.png')] bg-no-repeat bg-cover w-[635px] h-[635px] flex justify-center items-center relative">
+            <Image src={video} width={349} height={620} className="rounded-xl" alt="video resume"/>
+            <Image src={arrow} className="absolute left-[552px] top-1" alt="arrow"/>
+            <Image src={arrow} className="absolute left-2 bottom-8 rotate-[165deg]" alt="arrow"/>
+          </div>
+          <div className="absolute top-[51vh] left-[24vw] ">
+            <div className="w-[260px] h-[228px] border border-neutral-50 shadow-[10px_25px_100px_0px_rgba(0,43,107,0.25)] rounded-3xl flex justify-center items-center flex-col text-center bg-white">
+              <MdOutlineDevices className="text-main-200 w-12 h-12" />
+              <h1 className="font-bold text-xl text-neutral-900 mt-4">Showcase Work</h1>
+              <p className="text-xs text-main-100">Showcase your project to stand<br/>out among all</p>
+              <button className="mt-4">
+                <a href="#" className="bg-button-200 rounded-full w-[102px] h-9 flex justify-center items-center text-white text-xs hover:bg-button-100 transition duration-300">
+                  Add Work
+                </a>
+              </button>
+            </div>
+            <div className="w-[260px] h-[93px] border border-neutral-50 shadow-[10px_25px_100px_0px_rgba(0,43,107,0.25)] rounded-3xl mt-6 bg-white flex items-center">
+              <BiWorld className="text-main-200 w-12 h-12 mx-4" />
+              <div>
+                <h1 className="font-bold text-xl text-neutral-900">100K+</h1>
+                <p className="text-xs text-main-100">Worldwide Active Users</p>
+              </div>
+            </div>
+          </div>
+          <div className="absolute top-[44vh] right-[24vw]">
+            <div className="w-[260px] h-[93px] border border-neutral-50 shadow-[10px_25px_100px_0px_rgba(0,43,107,0.25)] rounded-3xl  bg-white flex items-center">
+              <TiMessages className="text-main-200 w-12 h-12 mx-4" />
+              <div>
+                <h1 className="font-bold text-xl text-neutral-900">Networking<br/>Opportunities</h1>
+              </div>
+            </div>
+            <div className="w-[260px] h-[228px] border border-neutral-50 shadow-[10px_25px_100px_0px_rgba(0,43,107,0.25)] rounded-3xl mt-6 flex justify-center items-center flex-col text-center bg-white">
+              <MdOutlineBuildCircle className="text-main-200 w-12 h-12" />
+              <h1 className="font-bold text-xl text-neutral-900 mt-4">Resume Builder</h1>
+              <p className="text-xs text-main-100">Create a professional resume using<br/>our built-in resume builder.</p>
+              <button className="mt-4">
+                <a href="#" className="bg-button-200 rounded-full w-[102px] h-9 flex justify-center items-center text-white text-xs hover:bg-button-100 transition duration-300">
+                Build Resume
+                </a>
+              </button>
+            </div>
           </div>
         </section>
       </main>
