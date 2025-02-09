@@ -1,0 +1,48 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        background: "var(--background)",
+        foreground: "var(--foreground)",
+        'neutral-800':"#272F3A",
+        "main-200":"#002B6B",
+        "main-100":"#414D60",
+        "button-100":"#0066FF",
+        "border-100":"#EDEDED",
+        "neutral-300":"#848D9B",
+        "neutral-900":"#1E242C",
+        "main-300":"#6C7787",
+        "bg-100":"#FAFAFA",
+        "neutral-500":"#475569",
+        "neutral-700":"#323C4B",
+        "neutral-50":"#EDEEF0",
+        "border-blue-100":"#8AB9FF"
+      },
+      fontFamily: {
+        manrope: ['var(--font-manrope)'],
+        general: ['var(--font-general-sans)'],
+      },
+      borderRadius:{
+        'full':"100px"
+      },
+      animation: {
+        fadeInOut: "fadeInOut 4s ease-in-out forwards",
+      },
+      keyframes: {
+        fadeInOut: {
+          "0%": { opacity: 0, transform: "translateY(20px)" },
+          "20%": { opacity: 1, transform: "translateY(0px)" },
+          "80%": { opacity: 1, transform: "translateY(0px)" },
+          "100%": { opacity: 1, transform: "translateY(0px)" },
+        }
+      },
+    },
+  },
+  plugins: [],
+};
