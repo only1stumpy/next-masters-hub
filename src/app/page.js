@@ -33,8 +33,17 @@ import { IoBriefcaseOutline } from "react-icons/io5";
 import { FaSearchLocation, FaMapMarkerAlt, FaStar } from "react-icons/fa";
 
 
+const getRandomUsers = (users) => {
+  return [...users].sort(() => Math.random() - 0.5);
+};
 
 function Page() {
+  const [shuffledUsers, setShuffledUsers] = useState(getRandomUsers(users));
+  const [activeTab, setActiveTab] = useState("developer");
+
+  useEffect(() => {
+    setShuffledUsers(getRandomUsers(users));
+  }, [activeTab]);
   return (
     <div className="overflow-x-hidden bg-white w-full">
       <BackgroundWrapper/>
@@ -109,6 +118,7 @@ function Page() {
                 <Tabs.Trigger
                   key={tab.value}
                   value={tab.value}
+                  onClick={() => setActiveTab(tab.value)}
                   className="flex items-center justify-center w-[185px] h-12 text-neutral-900  hover:text-button-100 aria-selected:text-button-100 transition-all duration-200 border-b border-main-300/10 aria-selected:bg-gradient-to-t aria-selected:border-b-button-100 aria-selected:from-button-100/10 aria-selected:to-white aria-selected:to-40% aria-selected:pb-1.5 overflow-hidden 
                   aria-selected:border-none aria-selected:after:content-[''] aria-selected:after:absolute aria-selected:after:bottom-0 aria-selected:after:left-0 aria-selected:after:w-full aria-selected:after:h-[1px] aria-selected:after:bg-button-100"
           >
@@ -121,7 +131,7 @@ function Page() {
             {categories.map((tab) => (
             <Tabs.Content key={tab.value} value={tab.value} className="p-6">
               <div className="grid grid-cols-4 gap-6">
-                {users.map((user, index) => (
+                {shuffledUsers.map((user, index) => (
                   <div
                     key={index}
                     className="rounded-2xl p-6 w-[292px] h-[242px] bg-white border hover:border-border-blue-100 hover:bg-[#E6F0FF] border-neutral-50 transition-all duration-200 flex justify-center hover:shadow-[10px_25px_100px_0px_rgba(0,43,107,0.25)] flex-col font-manrope"
@@ -148,7 +158,7 @@ function Page() {
           <div className="flex justify-center mt-10">
                 <button>
                   <a href="#" className="flex items-center text-button-100 border border-button-100 rounded-full hover:bg-button-100 hover:text-white transition font-bold">
-                  <p className="p-3 pl-6">View All</p> <BsArrowUpRightCircleFill className="w-10 h-10 m-1" />
+                    <p className="p-3 pl-6">View All</p> <BsArrowUpRightCircleFill className="w-10 h-10 m-1" />
                   </a>
                 </button>
           </div>
