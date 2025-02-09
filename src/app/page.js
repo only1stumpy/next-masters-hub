@@ -23,6 +23,7 @@ import avatar7 from "./img/avatar7.png"
 import avatar8 from "./img/avatar8.png"
 import video from "./img/video_resume.png"
 import arrow from "./img/Arrow.png"
+import logos from "./img/logos.png"
 
 // Icons
 import { MdDevices, MdOutlineDevices,MdOutlineBuildCircle  } from "react-icons/md";
@@ -52,19 +53,19 @@ function Page() {
   return (
     <div className="overflow-x-hidden bg-white w-full">
       <BackgroundWrapper/>
-      <header className="flex justify-around font-manrope pt-6 items-center text-base animate-fadeInOut opacity-0 [animation-delay:0.5s]">
+      <header className="flex justify-around font-manrope pt-6  text-center items-center text-base animate-fadeInOut opacity-0 [animation-delay:0.5s]">
         <a href="#">
-          <Image src={logo} alt="logo" width={183} height={17} />
+          <h1 className="font-fortus font-bold text-2xl md:max-lg:text-lg tel:max-md:text-sm text-white">MH. <span className="font-general font-medium">Masters Hub</span></h1>
         </a>
-        <nav className="font-normal flex justify-between w-[523px] text-neutral-800">
+        <nav className="font-normal flex justify-between tel:max-lg:gap-2 w-[27vw] text-neutral-800 md:max-lg:text-sm tel:max-md:text-xs">
           <a href="#">Create Resume</a>
           <a href="#">Skillset</a>
           <a href="#">Partnered Job Board</a>
           <a href="#">Contact Us</a>
         </nav>
-        <button className="w-[187px] h-12 font-bold pl-6 border rounded-full border-white text-white flex items-center justify-center hover:border-border-100 hover:text-border-100 transition ease-in duration-300">
-          <p className="py-3 pr-4">Register Now</p>
-          <BsArrowUpRightCircleFill className="w-10 h-10 p-1" />
+        <button className="w-[187px]  tel:max-lg:w-[93px] h-12 font-bold pl-6 tel:max-lg:pl-3 border rounded-full border-white text-white flex items-center justify-center hover:border-border-100 hover:text-border-100 transition ease-in duration-300">
+          <p className="py-3 pr-4 tel:max-lg:text-xs">Register Now</p>
+          <BsArrowUpRightCircleFill className="w-10 h-10 p-1 tel:max-lg:w-5 tel:max-lg:h-5" />
         </button>
       </header>
       <main>
@@ -113,7 +114,7 @@ function Page() {
             <Image src={card4} alt="card4" width={288} height={338} className="mx-3" />
           </Marquee>
         </section>
-        <section className="flex flex-col items-center justify-center font-normal text-base font-manrope text-center animate-fadeInOut opacity-0 [animation-delay:1.7s] bg-bg-100">
+        <section className="flex flex-col items-center justify-center font-normal text-base font-manrope text-center bg-bg-100">
           <h1 className="pt-[88px] font-general font-medium text-6xl text-neutral-900 w-screen bg-gradient-to-b from-white to-bg-100">Discover the<br/>Emerging Masters</h1>
           <p className="text-main-200 mt-4">Find the best master for your company and boosts<br/>your business 10x!</p>
           
@@ -124,7 +125,7 @@ function Page() {
                   key={tab.value}
                   value={tab.value}
                   onClick={() => setActiveTab(tab.value)}
-                  className="flex items-center justify-center w-[185px] h-12 text-neutral-900  hover:text-button-100 aria-selected:text-button-100 transition-all duration-200 border-b border-main-300/10 aria-selected:bg-gradient-to-t aria-selected:border-b-button-100 aria-selected:from-button-100/10 aria-selected:to-bg-100 aria-selected:to-40% aria-selected:pb-1.5 overflow-hidden 
+                  className="flex items-center justify-center w-[10vw] h-12 text-neutral-900  hover:text-button-100 aria-selected:text-button-100 transition-all duration-200 border-b border-main-300/10 aria-selected:bg-gradient-to-t aria-selected:border-b-button-100 aria-selected:from-button-100/10 aria-selected:to-bg-100 aria-selected:to-40% aria-selected:pb-1.5 overflow-hidden tel:max-xl:text-xs
                   aria-selected:border-none aria-selected:after:content-[''] aria-selected:after:absolute aria-selected:after:bottom-0 aria-selected:after:left-0 aria-selected:after:w-full aria-selected:after:h-[1px] aria-selected:after:bg-button-100"
           >
                   {tab.icon}
@@ -134,8 +135,8 @@ function Page() {
             </Tabs.List>
 
             {categories.map((tab) => (
-            <Tabs.Content key={tab.value} value={tab.value} className="p-6">
-              <div className="grid grid-cols-4 gap-6">
+            <Tabs.Content key={tab.value} value={tab.value} className="flex justify-center">
+              <div className="grid grid-cols-4 gap-6 lg:max-xl:grid-cols-3 sm:max-lg:grid-cols-2 tel:max-sm:grid-cols-1">
                 {shuffledUsers.map((user, index) => (
                   <div
                     key={index}
@@ -171,12 +172,12 @@ function Page() {
         <section className="flex justify-center items-center flex-col font-manrope min-w-screen min-h-screen relative">
           <h1 className="pt-[88px] font-general text-6xl text-neutral-900 text-center">Why Choose<br/>Masters in Me?</h1>
           <p className="text-main-100 pt-4 text-center">Unlock your true potential and discover a world of opportunities<br/>that align with your skills, interests, and aspirations</p>
-          <div className="mt-[52px] bg-[url('/img/bg-circles.png')] bg-no-repeat bg-cover w-[635px] h-[635px] flex justify-center items-center relative">
-            <Image src={video} width={349} height={620} className="rounded-xl" alt="video resume"/>
-            <Image src={arrow} className="absolute left-[552px] top-1" alt="arrow"/>
-            <Image src={arrow} className="absolute left-2 bottom-8 rotate-[165deg]" alt="arrow"/>
+          <div className="mt-[52px] mb-[48px] pb-10 bg-[url('/img/bg-circles.png')] bg-no-repeat bg-cover w-[635px] h-[635px] tel:max-sm:w-[318px] tel:max-sm:h-[318px] flex justify-center items-center relative">
+            <Image src={video} width={349} height={620} className="rounded-xl tel:max-sm:w-[175px] tel:max-sm:h-[310px]" alt="video resume"/>
+            <Image src={arrow} className="absolute left-[552px] top-1 tel:max-sm:opacity-0" alt="arrow"/>
+            <Image src={arrow} className="absolute left-2 bottom-8 rotate-[165deg] tel:max-sm:opacity-0" alt="arrow"/>
           </div>
-          <div className="absolute top-[51vh] left-[24vw] ">
+          <div className="absolute top-[45vh] left-[24vw] lg:max-2xl:left-[10vw] tel:max-lg:relative tel:max-lg:top-0 tel:max-lg:left-0">
             <div className="w-[260px] h-[228px] border border-neutral-50 shadow-[10px_25px_100px_0px_rgba(0,43,107,0.25)] rounded-3xl flex justify-center items-center flex-col text-center bg-white">
               <MdOutlineDevices className="text-main-200 w-12 h-12" />
               <h1 className="font-bold text-xl text-neutral-900 mt-4">Showcase Work</h1>
@@ -195,7 +196,7 @@ function Page() {
               </div>
             </div>
           </div>
-          <div className="absolute top-[44vh] right-[24vw]">
+          <div className="absolute top-[44vh] right-[24vw] lg:max-2xl:right-[10vw] tel:max-lg:relative tel:max-lg:top-2 tel:max-lg:left-0">
             <div className="w-[260px] h-[93px] border border-neutral-50 shadow-[10px_25px_100px_0px_rgba(0,43,107,0.25)] rounded-3xl  bg-white flex items-center">
               <TiMessages className="text-main-200 w-12 h-12 mx-4" />
               <div>
@@ -212,6 +213,19 @@ function Page() {
                 </a>
               </button>
             </div>
+          </div>
+        </section>
+        <section className="flex justify-center items-center flex-col font-manrope min-w-screen bg-bg-100 overflow-hidden">
+          <h1 className="pt-[88px] font-general text-6xl text-neutral-900 text-center w-screen bg-gradient-to-b from-white to-bg-100">We are happy to work<br/>with incredible clients</h1>
+          <p className="text-main-100 pt-4 text-center mb-10">Fortune 500 companies and renowned global brands place their trust in our products,<br/>solutions, and bespoke software development services.</p>
+           <div className="relative flex justify-center w-screen pb-[88px]">
+            <div className="absolute bottom-0 left-0 w-full h-[40vh] bg-gradient-to-t from-white to-transparent z-10"></div>
+            <Image src={logos} width={"44vw"} height={"24vh"} alt="logos" className="relative z-0"/>
+          </div>
+        </section>
+        <section className="flex justify-center items-center font-manrope min-w-screen bg-bg-100 overflow-hidden py-[88px]">
+          <div>
+            <h1>How It Works</h1>
           </div>
         </section>
       </main>

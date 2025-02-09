@@ -28,6 +28,7 @@ export default {
       fontFamily: {
         manrope: ['var(--font-manrope)'],
         general: ['var(--font-general-sans)'],
+        fortus: ['var(--font-fortusnova)']
       },
       borderRadius:{
         'full':"100px"
@@ -43,6 +44,9 @@ export default {
           "100%": { opacity: 1, transform: "translateY(0px)" },
         }
       },
+      screens:{
+        'tel':'320px'
+      }
     },
   },
   plugins: [],
