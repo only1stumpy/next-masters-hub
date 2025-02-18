@@ -6,9 +6,9 @@ import Image from 'next/image'
 import { Tabs } from '@chakra-ui/react'
 import BackgroundWrapper from '@/components/ui/bgwrapper'
 import Marquee from 'react-fast-marquee'
+import Portfolio from '@/components/ui/portfolio'
 
 // Images
-import logo from './img/logo.png'
 import card1 from './img/1.png'
 import card2 from './img/2.png'
 import card3 from './img/3.png'
@@ -24,12 +24,20 @@ import avatar8 from './img/avatar8.png'
 import video from './img/video_resume.png'
 import arrow from './img/Arrow.png'
 import logos from './img/logos.png'
+import how_1 from './img/how_it_1.png'
+import how_2 from './img/how_it_2.png'
+import how_avatar_1 from './img/how_it_avatar_1.png'
+import how_avatar_2 from './img/how_it_avatar_2.png'
+import how_avatar_3 from './img/how_it_avatar_3.png'
 
 // Icons
 import {
 	MdDevices,
 	MdOutlineDevices,
-	MdOutlineBuildCircle
+	MdOutlineBuildCircle,
+	MdLogin,
+	MdOutlineFileUpload,
+	MdContacts
 } from 'react-icons/md'
 import { RxComponent2 } from 'react-icons/rx'
 import { IoIosStats } from 'react-icons/io'
@@ -369,11 +377,101 @@ function Page() {
 						/>
 					</div>
 				</section>
-				<section className='flex justify-center items-center font-manrope min-w-screen bg-bg-100 overflow-hidden py-[88px]'>
+				<section className='flex justify-center items-center font-manrope min-w-screen bg-white overflow-hidden py-[88px]'>
 					<div>
-						<h1>How It Works</h1>
+						<h1 className='font-general font-medium text-neutral-900 text-6xl mb-12'>
+							How It Works
+						</h1>
+						<div className='flex flex-column justify-center items-center mb-7'>
+							<div className='flex items-center'>
+								<span className='font-general font-medium text-main-200 text-8xl opacity-15 mr-6'>
+									01
+								</span>
+								<div className='flex items-center gap-4 bg-white rounded-3xl p-6 text-button-100 shadow-[10px_25px_100px_0px_rgba(0,43,107,0.25)] min-w-[457px]'>
+									<MdLogin className='w-14 h-14 p-4 bg-border-200 rounded-full' />
+									<div className='pr-3'>
+										<h2 className='text-neutral-900 font-general font-medium text-2xl'>
+											Sign Up and create Account
+										</h2>
+										<p className='text-main-100 mt-1'>
+											Fill out your details and showcase your skills.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div className='flex gap-6 items-center flex-row-reverse mb-7'>
+							<span className='font-general font-medium text-main-200 text-8xl opacity-15 ml-6'>
+								02
+							</span>
+							<div className='flex items-center gap-4 bg-white rounded-3xl p-6 text-orange-500 shadow-[10px_25px_100px_0px_rgba(0,43,107,0.25)] min-w-[434px]'>
+								<MdOutlineFileUpload className='w-14 h-14 p-4 bg-orange-200 rounded-full' />
+								<div className='pr-3'>
+									<h2 className='text-neutral-900 font-general font-medium text-2xl'>
+										Upload Your Portfolio
+									</h2>
+									<p className='text-main-100 mt-1'>
+										Add your resume, videos, and more.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div className='flex gap-6 items-center'>
+							<span className='font-general font-medium text-main-200 text-8xl opacity-15 mr-6'>
+								03
+							</span>
+							<div className='flex items-center gap-4 bg-white rounded-3xl p-6 text-violet-600 shadow-[10px_25px_100px_0px_rgba(0,43,107,0.25)] min-w-[430px]'>
+								<MdContacts className='w-14 h-14 p-4 bg-violet-200 rounded-full' />
+								<div className='pr-3'>
+									<h2 className='text-neutral-900 font-general font-medium text-2xl'>
+										Get Discovered
+									</h2>
+									<p className='text-main-100 mt-1'>
+										Let employers find and contact you.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div className='ml-20 flex relative'>
+						<Image
+							src={how_1}
+							width={214}
+							height={339}
+							alt='man sitting'
+							className='mr-6 max-h-[339px]'
+						/>
+						<Image src={how_2} width={341} height={493} alt='woman sitting' />
+						<div className='absolute  top-[363px] bg-white rounded-3xl p-4 flex shadow-[10px_25px_100px_0px_rgba(0,43,107,0.25)]'>
+							<Image
+								src={how_avatar_1}
+								width={56}
+								height={56}
+								alt='avatar'
+								className='rounded-full shadow-inner shadow-white border-2 border-transparent'
+							/>
+							<Image
+								src={how_avatar_2}
+								width={56}
+								height={56}
+								alt='avatar'
+								className='rounded-full shadow-inner shadow-white border-2 border-transparent'
+							/>
+							<Image
+								src={how_avatar_3}
+								width={56}
+								height={56}
+								alt='avatar'
+								className='rounded-full shadow-inner shadow-white border-2 border-transparent'
+							/>
+							<div className='ml-4'>
+								<h2 className='text-button-100 font-bold text-xl'>10K +</h2>
+								<p className='text-main-100 font-semibold'>Job Seekers</p>
+							</div>
+						</div>
 					</div>
 				</section>
+				<Portfolio />
 			</main>
 		</div>
 	)

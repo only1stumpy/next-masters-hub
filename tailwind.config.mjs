@@ -22,6 +22,7 @@ export default {
 				'button-100': '#0066FF',
 				'button-200': '#3385FF',
 				'border-100': '#EDEDED',
+				'border-200': '#E1E9FE',
 				'border-blue-100': '#8AB9FF',
 				'bg-100': '#FAFAFA'
 			},
