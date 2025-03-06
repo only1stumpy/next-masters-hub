@@ -11,6 +11,7 @@ export default {
 				background: 'var(--background)',
 				foreground: 'var(--foreground)',
 				'neutral-50': '#EDEEF0',
+				'neutral-200': '#AAB1BA',
 				'neutral-300': '#848D9B',
 				'neutral-500': '#475569',
 				'neutral-700': '#323C4B',

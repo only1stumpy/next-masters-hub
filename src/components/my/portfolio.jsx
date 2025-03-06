@@ -19,7 +19,7 @@ export default function PortfolioShowcase() {
 	const [offset, setOffset] = useState(10)
 	const slideAmount = 33
 	const minOffset = 10
-	const maxOffset = -((portfolioItems.length - 3.3) * slideAmount)
+	const maxOffset = -((portfolioItems.length - 3.53) * slideAmount)
 
 	const nextSlide = () => {
 		setOffset((prev) => Math.max(prev - slideAmount, maxOffset))
@@ -38,18 +38,22 @@ export default function PortfolioShowcase() {
 					</h1>
 					<div className='flex gap-4 items-center'>
 						<button onClick={prevSlide} disabled={offset === minOffset}>
-							<GrFormNextLink
-								className={`w-16 h-16 p-6 rounded-full text-main-200 rotate-180 ${
+							<div
+								className={`flex items-center justify-center w-16 h-16 rounded-full text-main-200 rotate-180 ${
 									offset === minOffset ? 'bg-neutral-200' : 'bg-neutral-50'
 								}`}
-							/>
+							>
+								<GrFormNextLink className='w-6 h-6' />
+							</div>
 						</button>
 						<button onClick={nextSlide} disabled={offset === maxOffset}>
-							<GrFormNextLink
-								className={`w-16 h-16 p-6 rounded-full text-white ${
+							<div
+								className={`w-16 h-16 flex items-center justify-center rounded-full text-white ${
 									offset === maxOffset ? 'bg-neutral-300' : 'bg-button-100'
 								}`}
-							/>
+							>
+								<GrFormNextLink className='w-6 h-6' />
+							</div>
 						</button>
 					</div>
 				</div>
