@@ -35,6 +35,7 @@ import { IoBriefcaseOutline } from 'react-icons/io5'
 import { FaSearchLocation, FaMapMarkerAlt } from 'react-icons/fa'
 import { BiWorld } from 'react-icons/bi'
 import { TiMessages } from 'react-icons/ti'
+import FAQ from '@/components/my/faq.jsx'
 
 export default function Page() {
 	return (
@@ -362,6 +363,7 @@ export default function Page() {
 					</section>
 					<Portfolio />
 					<Reviews />
+					<FAQ />
 				</main>
 			</div>
 		</Suspense>
