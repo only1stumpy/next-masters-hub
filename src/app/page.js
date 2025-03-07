@@ -1,11 +1,9 @@
-import { Suspense } from 'react'
 
 // Components
 import Image from 'next/image'
 import BackgroundWrapper from '@/components/my/bgwrapper.jsx'
 import Marquee from 'react-fast-marquee'
 import Portfolio from '@/components/my/portfolio.jsx'
-import Loading from './loading.jsx'
 import MastersTabs from '@/components/my/masterstabs.jsx'
 import Reviews from '@/components/my/reviews.jsx'
 // Images
@@ -36,10 +34,11 @@ import { FaSearchLocation, FaMapMarkerAlt } from 'react-icons/fa'
 import { BiWorld } from 'react-icons/bi'
 import { TiMessages } from 'react-icons/ti'
 import FAQ from '@/components/my/faq.jsx'
+import Footer from '@/components/my/footer'
 
 export default function Page() {
 	return (
-		<Suspense fallback={<Loading />}>
+		<>
 			<div className='overflow-x-hidden bg-white w-full'>
 				<BackgroundWrapper />
 				<header className='flex justify-around font-manrope pt-6  text-center items-center text-base animate-fadeInOut opacity-0 [animation-delay:0.5s]'>
@@ -364,8 +363,9 @@ export default function Page() {
 					<Portfolio />
 					<Reviews />
 					<FAQ />
+					<Footer/>
 				</main>
 			</div>
-		</Suspense>
+		</>
 	)
 }
