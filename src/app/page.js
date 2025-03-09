@@ -1,4 +1,3 @@
-
 // Components
 import Image from 'next/image'
 import BackgroundWrapper from '@/components/my/bgwrapper.jsx'
@@ -6,6 +5,7 @@ import Marquee from 'react-fast-marquee'
 import Portfolio from '@/components/my/portfolio.jsx'
 import MastersTabs from '@/components/my/masterstabs.jsx'
 import Reviews from '@/components/my/reviews.jsx'
+import CTA from '@/components/my/cta.jsx'
 // Images
 import card1 from './img/1.png'
 import card2 from './img/2.png'
@@ -362,9 +362,12 @@ export default function Page() {
 					</section>
 					<Portfolio />
 					<Reviews />
+					<div className='w-screen bg-gradient-to-t from-white to-bg-100 h-[88px]'></div>
 					<FAQ />
-					<Footer/>
+					<CTA />
 				</main>
+				<Footer />
+				<div className="bg-[url('/img/bg_footer.png')] bg-no-repeat bg-cover h-screen absolute w-screen overflow-hidden max-w-[100vw] bottom-0"></div>
 			</div>
 		</>
 	)

@@ -3,9 +3,9 @@ import { GoPlus } from 'react-icons/go'
 
 export default function FAQ() {
 	return (
-		<section className='flex flex-col font-manrope min-w-screen bg-white overflow-hidden py-[88px] items-center'>
+		<section className='flex flex-col font-manrope min-w-screen bg-white overflow-hidden items-center'>
 			<div>
-				<h1 className='font-general font-medium text-6xl text-neutral-900'>
+				<h1 className='font-general font-medium text-6xl text-neutral-900 '>
 					Frequently Asked Questions
 				</h1>
 				<div className='grid grid-cols-2 gap-4 mt-8'>

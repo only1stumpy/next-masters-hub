@@ -7,7 +7,7 @@ import portfolio_2 from '@/app/img/porfolio_2.png'
 export default function Reviews() {
 	const [numRev, setNumRev] = useState(0)
 	return (
-		<section className='flex flex-col font-manrope min-w-screen bg-bg-100 overflow-hidden py-[88px] items-center'>
+		<section className='flex flex-col font-manrope min-w-screen bg-bg-100 overflow-hidden pt-[88px] items-center'>
 			<div>
 				<h1 className='font-general font-medium text-6xl text-neutral-900'>
 					What our clients say

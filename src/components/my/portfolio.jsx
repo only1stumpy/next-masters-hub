@@ -30,9 +30,9 @@ export default function PortfolioShowcase() {
 	}
 
 	return (
-		<section className='flex justify-start flex-col font-manrope min-w-screen bg-white overflow-hidden py-[88px]'>
+		<section className='flex justify-start flex-col font-manrope min-w-screen bg-white overflow-hidden pt-[88px]'>
 			<div>
-				<div className='flex justify-between w-full px-[200px]'>
+				<div className='flex justify-between px-[200px]'>
 					<h1 className='font-general font-medium text-6xl text-neutral-900'>
 						Top Talent Portfolio Showcase
 					</h1>
@@ -57,7 +57,7 @@ export default function PortfolioShowcase() {
 						</button>
 					</div>
 				</div>
-				<div className='w-full overflow-hidden mt-12 flex'>
+				<div className='w-full overflow-hidden mt-12 flex bg-gradient-to-b from-white to-bg-100'>
 					<div
 						className='flex transition-transform duration-700 ease-in-out'
 						style={{ transform: `translateX(${offset}%)` }}
